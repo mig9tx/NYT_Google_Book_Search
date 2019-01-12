@@ -1,7 +1,7 @@
 {
-  "name": "mern",
+  "name": "nyt_google_book_search",
   "version": "1.0.0",
-  "description": "Mern Demo",
+  "description": "nyt_google_book_search",
   "main": "server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && yarn start:prod || yarn start:dev",
