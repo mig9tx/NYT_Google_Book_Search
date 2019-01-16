@@ -5,8 +5,8 @@ import Form from './components/Form';
 class App extends Component {
   render() {
     return (
-      <div>
-      <h1>Google Books Search App</h1>
+      <div className="jumbotron">
+        <h1>Google Books Search App</h1>
       <Form />
       </div>
     );
