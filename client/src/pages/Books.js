@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { Input, FormBtn, TextArea } from '../components/Form';
 import API from '../utils/API';
 import { Link } from 'react-router-dom';
+import Card from '../components/Card';
 
 
 class Books extends Component {
@@ -13,12 +14,13 @@ class Books extends Component {
   }
 
   componentDidMount() {
-    this.loadBooks();
+    this.searchGoogleBooks("harry potter");
   }
 
   searchGoogleBooks = query => {
     API.search(query)
-      .then(res => this.setState({ results: res.data }))
+      .then(res => this.setState({ results: res.data.items }))
+      console.log(this.state.results);
 
   }
 
@@ -70,9 +72,28 @@ class Books extends Component {
             >Submit
             </FormBtn>
           </form>
+          {this.state.results.length ? (
+          <div className="results">
+          {this.state.results.map(book => (
+            <div>
+            <Card
+            id={book.id}
+            title={book.volumeInfo.title}
+            author={book.volumeInfo.authors}
+            description={book.volumeInfo.description}
+            image={book.volumeInfo.imageLinks.thumbnail}
+            />
+            </div>
+            ))
+          }
+          </div>
+          ) : (
+            <h3> No Results to Display </h3>
+          )}
+
         </div>
       </div>
-
+    
       
     );
   }
