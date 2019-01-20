@@ -17,8 +17,15 @@ const Nav = (props) => {
                     <a className="nav-link" href="/">Browse <span className="sr-only">(current)</span></a>
                 </li>
                 <li className="nav-item">
-                <a className="nav-link" href="/">Saved </a>
+                    <a className="nav-link" href="/">Saved </a>
                 </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="https://mig9tx.github.io/#portfolio">Portfolio</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="https://github.com/mig9tx/nyt_google_book_search">GitHub</a>
+                </li>
+
             </ul>
             </div>
         </nav>
