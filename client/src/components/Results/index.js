@@ -5,3 +5,5 @@ const Results = (props) => {
         <div className='result-list'></div>
     )
 }
+
+export default Results;

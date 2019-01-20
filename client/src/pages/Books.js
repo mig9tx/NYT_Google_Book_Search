@@ -72,6 +72,7 @@ class Books extends Component {
             >Submit
             </FormBtn>
           </form>
+          </div>
           {this.state.results.length ? (
           <div className="results">
           {this.state.results.map(book => (
@@ -91,7 +92,7 @@ class Books extends Component {
             <h3> No Results to Display </h3>
           )}
 
-        </div>
+        
       </div>
     
       
